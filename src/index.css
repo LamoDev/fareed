@@ -1,13 +1,38 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+@font-face {
+  font-family:myFont ;
+  src: url(/public/fonts/expoFont.TTF);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  margin: 0;
+  padding:0;
+}
+
+
+:root{
+  --primaryFont:#DECFEC;
+  --blue:#93BEFF;
+  --yellow:#F6CD46;
+  --mauve:#D9BEF4;
+  --purple:#8D70AA;
+
+}
+.container{
+  
+}
+
+
+body {
+  background-color:#463B66;
+  
+
+
+}
+
+.flex{
+  display:flex;
+}
+.border{
+  border:1px solid red
 }

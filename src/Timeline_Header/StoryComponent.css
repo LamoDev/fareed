@@ -1,0 +1,124 @@
+.story-container {
+    position: relative; /* Set relative positioning for the container */
+    overflow: hidden; /* Ensure overflow is hidden */
+    width: 100%; /* Ensure full width */
+    padding-top: 40px;
+}
+
+.image-wrapper {
+    position: relative; /* Position relative for absolute children */
+    width: 100%; /* Full width */
+    padding-top: 40px;
+  
+}
+
+.background-image {
+    width: 100%; /* Ensures the image takes full width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional, for rounded corners */
+    animation: zoomIn 10s infinite alternate; /* Continuous zoom effect */
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+.text-overlay {
+    position: absolute; /* Position text over the image */
+    top: 18%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust centering */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    border-radius: 10px; /* Rounded corners */
+ padding-top: 30px;
+}
+
+.title-text {
+    font-size: 60px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.description-text {
+    font-size: 22px;
+    line-height: 1.6;
+    margin: 10px 0;
+    color: white;
+    max-width: 800px; /* Restrict max width for better readability */
+}
+
+/* Responsive styles */
+@media (max-width: 1000px) {
+    .title-text {
+        font-size: 50px;
+        margin-bottom: 10px;
+        font-weight: 500;
+    }
+    .description-text {
+        font-size: 18px;
+       
+    }
+
+}
+@media (max-width: 800px) {
+    .title-text {
+        font-size: 40px;
+       
+    }
+    .description-text {
+        font-size: 16px;
+       
+       
+    }
+
+    
+}
+
+
+
+@media (max-width: 650px) {
+    .title-text {
+        font-size:30px; /* Reduce font size on smaller screens */
+    }
+
+    .description-text {
+        font-size:15px; /* Adjust description font size */
+        line-height: 1.4;
+    }
+}
+@media (max-width: 550px) {
+    .title-text {
+        font-size:30px; /* Reduce font size on smaller screens */
+    }
+
+    .description-text {
+        font-size:13px; /* Adjust description font size */
+        line-height: 1.4;
+        
+    }
+    .text-overlay{
+       padding-bottom: 20px;
+    }
+}
+@media (max-width: 450px) {
+    .title-text {
+        font-size:26px; /* Reduce font size on smaller screens */
+    }
+
+    .description-text {
+        font-size:10px; /* Adjust description font size */
+        line-height: 1.4;
+        
+    }
+
+}
+   
+
+
+

@@ -1,0 +1,196 @@
+.team-members {
+    padding: 20px;
+    text-align: center;
+    background-color: #463B66;
+    margin-top: 100px;
+}
+
+.team-title {
+    font-size: 3.75em; /* Responsive size */
+    margin-bottom: 10px;
+    color: #fff;
+    margin-top: 20px;
+}
+
+.cards-container {
+    width: 70%; /* Use a percentage for responsiveness */
+    max-width: 1200px; /* Max width for large screens */
+    margin: 0 auto; /* Center the container */
+    
+}
+
+.member-card {
+    background-color: #BFA4E1;
+    padding: 20px; 
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; 
+    border: 10px solid #fafafa; /* Reduced border for better space */
+    font-size: 1.2em; /* Base font size */
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Aligns content */
+    height: auto; /* Allow height to adjust based on content */
+    overflow: hidden; /* Prevent overflow */
+    margin: 10px; /* Space between cards */
+    margin-bottom: 30px;
+}
+
+/* Adjust image styling for responsiveness */
+.member-image {
+    width: 100%;
+    height: auto; /* Keep aspect ratio */
+    border-radius: 10px; 
+}
+
+.member-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    background-color: #e4d8ff; 
+}
+
+.member-name, .member-position {
+    text-align: center; /* Center the text */
+    overflow: hidden; /* Prevent overflow */
+    text-overflow: ellipsis; /* Add ellipsis */
+    white-space: normal; /* Allow text to wrap */
+    margin: 5px 0; /* Space between the elements */
+}
+
+.member-name {
+    font-size: 1.2em; /* Responsive font size */
+}
+
+.member-position {
+    color: #666;
+}
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 99;
+    animation: fadeIn 0.5s; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content {
+    background-color: #fff;
+    border-radius: 15px; 
+    padding: 30px;
+    text-align: center;
+    position: relative;
+    font-size: 1.2em; /* Responsive size */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.modal-image {
+    width: 60%; 
+    max-width: 300px; /* Max width for modal image */
+    height: auto; /* Keep aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.close {
+    position: absolute;
+    top: 15px; 
+    right: 20px;
+    font-size: 2em; /* Responsive size */
+    cursor: pointer;
+    color: #463B66; 
+    transition: color 0.3s; 
+}
+
+.close:hover {
+    color: #ff4d4d; 
+}
+
+.modal-name {
+    font-size: 1.5em; 
+    color: #3b2f6b; 
+    margin: 15px 0; 
+}
+
+.modal-position {
+    color: #666;
+    font-style: italic;
+}
+
+.modal-description {
+    color: #444; 
+    margin-top: 10px;
+    line-height: 1.5; 
+}
+
+/* Additional styles for slider components */
+.slick-dots {
+    margin-top: 30px; /* Margin between dots and cards */
+    background-color: #ae93ff1a;
+    border-radius: 100px;
+    
+}
+
+.slick-prev, .slick-next {
+    font-size: 30px; /* Increase arrow size */
+    z-index: 1000; /* Ensure arrows are above other elements */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .member-card {
+        font-size: 1.1em; /* Slightly smaller font on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .team-title {
+        font-size: 2em; /* Reduce title size */
+    }
+
+    .member-name {
+        font-size: 1.1em; /* Adjust member name size */
+    }
+
+    .member-position {
+        font-size: 0.9em; /* Adjust position size */
+    }
+    
+    .modal-content {
+        padding: 20px; /* Reduce padding in modal */
+        font-size: 1em; /* Smaller font size in modal */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-title {
+        font-size: 1.8em; /* Further reduce title size */
+    }
+
+    .member-card {
+        margin: 5px; /* Less margin on small screens */
+    }
+
+    .modal-image {
+        width: 80%; /* Larger image on small screens */
+    }
+
+    .modal-name {
+        font-size: 1.2em; /* Smaller modal name */
+    }
+}
